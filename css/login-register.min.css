@@ -1,0 +1,128 @@
+.login,.register{
+    position: relative;
+    width: 1040px;
+    margin: 0 auto;
+}
+body{
+    background: url(../img/Shanghai-Bund-skyscrapers-night-lights-river-China_2560x1600.jpg) no-repeat center center fixed;
+    background-size: cover;
+    opacity: 1;
+}
+[class$="-header"]{
+    margin-bottom: 60px;
+    text-align: center;
+    color: #fff;
+    height: 60px;
+}
+[class$="HeaderContent"]>.title{
+    font-size: 30px;
+    letter-spacing: 30px;
+    margin-bottom: 20px;
+    margin-left: 40px;
+}
+.loginContent,.registerContent{
+    width: 700px;
+    background-color:rgba(255, 255, 255, .3);
+    margin: 0 auto;
+    box-shadow: 0 0 5px 5px rgba(255, 255, 255, 0.4);
+    border-radius: 10px;
+}
+[class$="ContentHead"]{
+    width: 100%;
+    height: 70px;
+    line-height: 35px;
+    display: block;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+li i{
+    background:url(../img/icons.png) 11px -20px no-repeat;
+    width: 32px;
+    height: 35.2px;
+    float: left;
+    margin-top: 21px;
+    margin-left: 270px;
+    transform:scale(1.2);
+    -ms-transform:scale(1.2);
+    -webkit-transform:scale(1.2);
+    -o-transform:scale(1.2);
+    -moz-transform:scale(1.2);
+}
+li span{
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    margin-top: 22px;
+    margin-left: 20px;
+    letter-spacing: 5px;
+}
+[class$=ContentTab]{
+    padding: 20px 35px 22px 35px;
+}
+.contentItem{
+    display: block;
+}
+.contentItem p{
+    margin-bottom: 20px;
+    position: relative;
+    margin-top: 0px;
+}
+.auth-icon{
+    width: 20px;
+    height: 20px;
+    float: left;
+    margin-top: 12.2px;
+    margin-left: 160px;
+    margin-right: 12px;
+}
+.auth-input{
+    border: 1px solid #ccc;
+    padding: 8px 12px;
+    font-size: 14px;
+    width: 251px;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid white;
+    outline: none;
+    
+}
+.auth-input::-webkit-input-placeholder { /* WebKit browsers */
+    color: rgba(255, 255, 255, 0.6);
+}
+.auth-input::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color: white;
+}
+.auth-input::-ms-input-placeholder { /* Internet Explorer 10+ */
+    color: white;
+}   
+[class$=-button]{
+    margin: 0 auto;
+}
+[class$=-button] button{
+    color: #fff;
+    background-color: rgba(33,150,243,.3);
+    border: 2px solid #fff;
+    position: relative;
+    cursor: pointer;
+    width: 250px;
+    height: 40px;
+    text-align: center;
+    margin: 20px 190px 20px 190px;
+    border-radius: 10px;
+}
+[class$=Button-zh]{
+    font-size: 18px;
+    letter-spacing: 11px;
+    line-height: 38px;
+    margin-left: 8px;
+}
+[class$=Button-en]{
+    font-size: 18px;
+    letter-spacing: 1px;
+    line-height: 38px;
+    margin-left: 8px;
+}
+a:visited,a:link{
+    color: #fff;
+}
+
