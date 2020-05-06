@@ -206,7 +206,7 @@ path.candle.down {
 }
 
 .crosshair path.wire {
-    stroke: #DDDDDD;
+    stroke: #2f3557;
     stroke-dasharray: 1, 1;
 }
 
