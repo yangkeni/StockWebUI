@@ -31,7 +31,7 @@ header{
     margin-bottom: 10px;
 }
 .menu-wrap ul li a:link,.menu-wrap ul li a:visited{
-    color:rgb(250, 250, 250);
+    color:#2f3557;
 }
 .searchWrapper{
     width: 900px;

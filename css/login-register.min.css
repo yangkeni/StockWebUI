@@ -11,7 +11,7 @@ body{
 [class$="-header"]{
     margin-bottom: 60px;
     text-align: center;
-    color: #fff;
+    color: #2f3557;
     height: 60px;
 }
 [class$="HeaderContent"]>.title{
@@ -35,8 +35,10 @@ body{
     margin-bottom: 10px;
     box-sizing: border-box;
 }
+li{
+    font-size: 17px;
+}
 li i{
-    background:url(../img/icons.png) 11px -20px no-repeat;
     width: 32px;
     height: 35.2px;
     float: left;
@@ -47,9 +49,11 @@ li i{
     -webkit-transform:scale(1.2);
     -o-transform:scale(1.2);
     -moz-transform:scale(1.2);
+    padding: 11px 10px 6px;
+    box-sizing: border-box;
 }
 li span{
-    color: white;
+    color: #2f3557;
     font-size: 20px;
     position: absolute;
     margin-top: 22px;
@@ -82,18 +86,18 @@ li span{
     width: 251px;
     background: transparent;
     border: none;
-    border-bottom: 1px solid white;
+    border-bottom: 1px solid #2f3557;
     outline: none;
     
 }
 .auth-input::-webkit-input-placeholder { /* WebKit browsers */
-    color: rgba(255, 255, 255, 0.6);
+    color: #2f3557;
 }
 .auth-input::-moz-placeholder { /* Mozilla Firefox 19+ */
-    color: white;
+    color: #2f3557;
 }
 .auth-input::-ms-input-placeholder { /* Internet Explorer 10+ */
-    color: white;
+    color: #2f3557;
 }   
 [class$=-button]{
     margin: 0 auto;
