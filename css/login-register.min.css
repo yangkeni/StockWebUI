@@ -18,7 +18,11 @@ body{
     font-size: 30px;
     letter-spacing: 30px;
     margin-bottom: 20px;
-    margin-left: 40px;
+    margin-left: 25px;
+}
+.loginHeaderContent{
+    padding-top: 15px;
+    text-align: center;
 }
 .loginContent,.registerContent{
     width: 700px;
