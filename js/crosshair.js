@@ -30,6 +30,7 @@ var margin = {top: 20, right: 50, bottom: 30, left: 50},
     var percentAnnotation = techan.plot.axisannotation()
             .axis(percentAxis)
             .orient('left');
+            
     
     var ohlcRightAnnotation = techan.plot.axisannotation()
             .axis(yRightAxis)
@@ -123,6 +124,6 @@ var margin = {top: 20, right: 50, bottom: 30, left: 50},
 
     function move(coords) {
         coordsText.text(
-            timeAnnotation.format()(coords.x) + ", " + percentAnnotation.format()(coords.y)
+            timeAnnotation.format()(coords.x) + ", " + ohlcRightAnnotation.format()(coords.y)
         );
     }
