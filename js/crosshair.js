@@ -66,7 +66,7 @@ var margin = {top: 20, right: 50, bottom: 30, left: 50},
             .attr("x", width - 5)
             .attr("y", 15);
 
-    d3.csv("../data/data.csv", function(error, data) {
+    d3.csv("../data/data3.csv", function(error, data) {
         var accessor = candlestick.accessor();
 
         data = data.slice(0, 200).map(function(d) {
@@ -111,7 +111,7 @@ var margin = {top: 20, right: 50, bottom: 30, left: 50},
         svg.append('text')
                 .attr("x", 5)
                 .attr("y", 15)
-                .text("贵州茅台 （600519）");
+                .text("五粮液 （00858）");
     });
 
     function enter() {
