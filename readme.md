@@ -1,9 +1,5 @@
-开始：html/register.html
-
-整体情况：
-	消息页面未完成
-	表面上的功能是差不多了（纯静态）
-	（实际离真正的前端完成仍有一段距离）
-
-未达成
-	js的使用
+start：html/register.html
+TODO:{
+    specific    css
+    api&js
+}
