@@ -1,6 +1,6 @@
 .login,.register{
     position: relative;
-    width: 1040px;
+    width: 100%;
     margin: 0 auto;
 }
 body{
@@ -9,16 +9,27 @@ body{
     opacity: 1;
 }
 [class$="-header"]{
-    margin-bottom: 60px;
+    margin-bottom: 20px;
     text-align: center;
     color: #2f3557;
-    height: 60px;
+    height: 50px;
 }
-[class$="HeaderContent"]>.title{
-    font-size: 30px;
+[class$="HeaderContent"]>.title>span{
+    font-size: 23px;
     letter-spacing: 30px;
-    margin-bottom: 20px;
-    margin-left: 25px;
+    margin-left: 55px;
+    position: relative;
+}
+[class$="HeaderContent"]>.title>span:before{
+    content: " ";
+    top: -3px;
+    left: -40px;
+    width: 30px;
+    height: 38px;
+    display: inline-block;
+    background: url(../img/favicon-ver1.1.ico) no-repeat center center;
+    background-size: 23px;
+    position: absolute;
 }
 .loginHeaderContent{
     padding-top: 15px;

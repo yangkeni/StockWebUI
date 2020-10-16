@@ -14,29 +14,36 @@ header{
     font-size: 14px;
     margin-left: 20px;
 }
-.nav-header{
-    width: 1170px;
+/*TODO: css
+固定导航栏：缺少滑下时的导航栏整体变色
+搜索框：正则表达式
+三个板块hover突出
+
+*/
+/*TODO: js
+引用js文件，设置新闻界面
+完善>>更多
+完善搜索框
+*/
+
+.nav_header{
+    width: 100%;
     height: 60px;
-    padding-right: 15px;
-    padding-left: 15px;
-    margin-right: auto;
-    margin-left: auto;
-    box-sizing: border-box;
-    
 }
 .menu-wrap{
-    float: right;
     line-height: 40px;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    position: fixed;
+    top:10px;
+    right: 12%;
 }
 .menu-wrap ul li a:link,.menu-wrap ul li a:visited{
     color:#2f3557;
 }
+/*搜索框*/
 .searchWrapper{
     width: 900px;
     height: 60px;
-    margin: 30px auto 55px;
+    margin: 0px auto 55px;
     text-align: center;
     background-color: rgba(0, 0, 0, 0.3);
     border-radius: 30px;
@@ -52,6 +59,18 @@ header{
     box-sizing: border-box;
     outline: none;
     float: left;
+    transition: all .78s ease;
+    -moz-transition: all .78s ease;	
+    -webkit-transition: all .78s ease;
+    -o-transition:  all .78s ease;
+}
+.searchBox:hover,.searchBox:focus{
+    box-shadow:  0 0 3px 3px rgba(0, 0, 0, 0.4);
+    transform: scale(1.06);
+    
+}
+.searchForm{
+    padding: 0px !important;
 }
 .searchForm button{
     width: 40px;
@@ -63,21 +82,29 @@ header{
     color: rgba(250, 250, 250, 0.6);
     outline: none;
     cursor: pointer;
+    transition: all .78s ease;
+    -moz-transition: all .78s ease;	
+    -webkit-transition: all .78s ease;
+    -o-transition:  all .78s ease;
+}
+.searchForm button:hover{
+    transform: scale(1.16);
 }
 .Content{
-    margin: 0 158px;
+    width: 1220px;
+    margin: 0 auto;
     background-color: rgba(255, 255, 255, 0.3);
     min-height: 400px;
     box-shadow: 0 2px 4px rgba(0,0,0,.5);
     border-radius: 15px;
+    display: flex;
+    justify-content: space-between;
 }
 .Content a:link,.Content a:visited{
     color: #2f3557;
 }
-.buyForm{
-    float: left;
-    margin: 0px 50px 0px 30px;
-    padding: 10px;
+.topForm{
+    margin-left: 30px;
 }
 [class$=-Stock],.singleIndex{
     padding-left: 15px;
@@ -85,54 +112,46 @@ header{
     background-color: rgba(250, 250, 250, 0.6);
     box-shadow: 0 2px 4px rgba(0,0,0,.1);
     border-radius: 10px;
-    -webkit-transition: all 1.2s ease;
-    transition: all 1.2s ease;
+    transition: all .5s ease;
+    -moz-transition: all .78s ease;	
+    -webkit-transition: all .5s ease;
+    -o-transition:  all .78s ease;
 }
-.buy-Stock table{
+[class$=-Stock]:hover,.singleIndex:hover{
+    box-shadow: 0 2px 4px rgba(0,0,0,.8);
+    transform: scale(1.1);
+}
+[class$=Form]{
+    position: relative;
+    padding: 10px; 
+}
+.more{
+    position: absolute;
+    bottom: 40px;
+    right: 20px;
+}
+.top-Stock table{
     margin-bottom: 15px;
     border-spacing: 6px;
     border-collapse: separate;
 }
-.Stockname{
+.StockName{
     text-indent: 1em;
     font-size: 14px;
     border-bottom: 1px solid rgba(0,0,0, .4);
     padding-bottom: 5px;
 }
-.Stockname a h3{
+.StockName a h3{
     float: left;
     margin-right: 8px;
 }
-.bigTheme{
-    font-size: 18px;
-}
-.bigTheme span{
-    font-size: 14px;
-}
-.littleTheme{
-    font-size: 14px;
-}
-.littleTheme span{
-    font-size: 12px;
-}
-.color-red{
-    color: rgba(255, 0, 0, .7);
-}
-.color-green{
-    color: rgba(40, 170, 40, 0.7);
-}
-.optionForm{
-    float: left;
-    margin: 0px 50px 0px 30px;
-    padding: 10px;
-}
-.IndexForm{
+.IndexDocker{
     height: 85px;
     box-sizing: border-box;
     text-align: center;
     margin-bottom: 15px;
 }
-.Indexname{
+.IndexName{
     font-size: 14px;
 }
 .singleIndex{
@@ -157,27 +176,8 @@ header{
     font-size: 14px;
     border-bottom: 1px solid rgba(0,0,0, .4);
 }
-.priceinfo{
-    text-align: center;
-    padding: 10px 5px 5px;
-    float: left;
-}
-.otherinfo{
-    float: left;
-    margin-left: 6px;
-}
-.otherinfo table{
-    text-align: center;
-    font-size: 13px;
-}
-.otherinfo table td{
-    text-align: left;
-    padding: 3px 10px;
-}
 .recommendForm{
-    float: left;
-    margin: 0px 30px 0px 30px;
-    padding: 10px;
+    margin-right: 30px;
 }
 .recommendTheme{
     text-indent: 1em;
