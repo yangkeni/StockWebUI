@@ -1,23 +1,7 @@
-body{
-    background: url(../img/3.png) no-repeat center center fixed;
-    background-size: cover;
-    opacity: 1;
-}
-header{
-    margin-bottom: 50px;
-}
-.menu-wrap ul{
-    list-style: none;
-}
-.menu-wrap ul li{
-    float: left;
-    font-size: 14px;
-    margin-left: 20px;
-}
+
 /*TODO: css
 固定导航栏：缺少滑下时的导航栏整体变色
 搜索框：正则表达式
-三个板块hover突出
 
 */
 /*TODO: js
@@ -26,19 +10,7 @@ header{
 完善搜索框
 */
 
-.nav_header{
-    width: 100%;
-    height: 60px;
-}
-.menu-wrap{
-    line-height: 40px;
-    position: fixed;
-    top:10px;
-    right: 12%;
-}
-.menu-wrap ul li a:link,.menu-wrap ul li a:visited{
-    color:#2f3557;
-}
+
 /*搜索框*/
 .searchWrapper{
     width: 900px;
@@ -100,9 +72,7 @@ header{
     display: flex;
     justify-content: space-between;
 }
-.Content a:link,.Content a:visited{
-    color: #2f3557;
-}
+
 .topForm{
     margin-left: 30px;
 }
