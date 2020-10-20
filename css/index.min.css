@@ -170,3 +170,10 @@
     letter-spacing: 1px;
     line-height: 30px;
 }
+.priceInfo .amount{
+    margin-left: 10px;
+}
+.option-Stock .otherInfo{
+    float: right;
+    margin-right: 55px;
+}

@@ -3,15 +3,19 @@
     <head>
         <meta charset="UTF-8">
         <base target="_self" />
+        <link href="../img/favicon-ver1.1.ico" rel="shortcut icon">
         <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css">
         <link rel="stylesheet" href="../css/reset.css">
         <link rel="stylesheet" href="../css/specific.min.css">
-        <title>具体界面</title>
+        <link rel="stylesheet" href="../css/index-specific.css">
+        <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+        
+        <title>五粮液</title>
     </head>
     <body>
         <div class="wrapper">
             <header>
-                <div class="nav-header">
+                <div class="nav_header">
                     <nav class="menu-wrap">
                         <ul>
                             <li class="current-menu-item">
@@ -28,55 +32,44 @@
                     <div class="StockHeader">
                         <div class="title">
                             <a href="#">
-                                <h3>贵州茅台</h3><span> (600519)</span>
+                                <h3>五粮液</h3> (<span>sz000858</span>)
                             </a>
                         </div>
-                        <div class="maindata">
-                            <div class="priceinfo">
-                                <span class="price bigTheme color-red">1252.
-                                    <span>26</span>
+                        <div class="mainData">
+                            <div class="priceInfo">
+                                <span class="price bigTheme">235.
+                                    <span>00</span>
                                 </span>
-                                <span class="amount littleTheme color-red">+7.
-                                    <span>76</span>
+                                <i class="fa fa-2x"></i>
+                                <span class="amount littleTheme">-1.
+                                    <span>24</span>
                                 </span>
-                                <span class="range littleTheme color-red">(+0.
-                                    <span>62</span>%)
+                                <span class="range littleTheme">(-0.
+                                    <span>52</span>%)
                                 </span>
                             </div>
-                            <div class="otherinfo">
+                            <div class="otherInfo">
                                 <table cellspacing="0" cellpadding="0" class="yfw">
                                     <tbody>
                                         <tr>
-                                            <td>今开：</td>
-                                            <td class="color-green">1248.00</td>
-                                            <td>最高：</td>
-                                            <td class="color-red">1259.89</td>
-                                            <td>涨停：</td>
-                                            <td class="color-red">1377.49</td>
-                                            <td>换手：</td>
-                                            <td>0.15%</td>
-                                            <td>成交量：</td>
-                                            <td>1.91万手</td>
-                                            <td>市盈率：
-                                            <td>38.12</td>
-                                            <td>总市值：</td>
-                                            <td>15710亿</td>
+                                            <td class = "open">今开：</td>
+                                            <td>235.20</td>
+                                            <td class="high">最高：</td>
+                                            <td>239.78</td>
+                                            <td class="limitUp">涨停：</td>
+                                            <td class="color-red">259.86</td>
+                                            <td class="totalVolume">成交量：</td>
+                                            <td><span>19.63</span>手</td>
                                         </tr>
                                         <tr>
-                                            <td>昨收：</td>
-                                            <td>1252.26</td>
-                                            <td>最低：</td>
-                                            <td class="color-green">1235.18</td>
-                                            <td>跌停：</td>
-                                            <td class="color-green" >1127.03</td>
-                                            <td>量比：</td>
-                                            <td >0.59</td>
-                                            <td>成交额：</td>
-                                            <td>23.90亿</td>
-                                            <td>市净：</td>
-                                            <td>11.55</td>
-                                            <td>流通市值：</td>
-                                            <td>15710亿</td>
+                                            <td class="close">昨收：</td>
+                                            <td>236.24</td>
+                                            <td class="low">最低：</td>
+                                            <td>233.80</td>
+                                            <td class="limitDown">跌停：</td>
+                                            <td class="color-green">212.62</td>
+                                            <td class="turnover">成交额：</td>
+                                            <td><span>46.43</span>万</td>
                                         </tr>
                                     </tbody>
                                 </table>
@@ -84,11 +77,20 @@
                         </div>
                     </div>
                     <div class="main">                       
-                        <div class="Stockinfo">
+                        <div class="StockInfo">
+                            <div class="tagChoice">
+                                <ul>
+                                    <a href="javascipt:void(0)"><li class="CandlesTag currentLink">Candles</li></a>
+                                    <a href="javascipt:void(0)"><li class="VolumeTag">Volume</li></a>
+                                    <a href="javascipt:void(0)"><li class="AroonTag">Aroon</li></a>
+                                    <a href="javascipt:void(0)"><li class="MACDTag">MACD</li></a>
+                                    <a href="javascipt:void(0)"><li class="ACDTag">ACD</li></a>
+                                    <a href="javascipt:void(0)"><li class="WRTag">W%R</li></a>
+                                </ul>
+                            </div>
                             <div class="layout">
                                 <script src="https://d3js.org/d3.v4.min.js"></script>
-                                <script src="http://techanjs.org/techan.min.js"></script>
-                                <script type="text/javascript" src="../js/crosshair.js"></script>
+                                <script src="http://techanjs.org/techan.min.js"></script>     
                             </div>
                         </div>
                         <div class="predict">
@@ -98,13 +100,13 @@
                                         综合评分 
                                     </h3>
                                     <span class="color-red ">
-                                       85 
+                                       78 
                                     </span>
                                     <div class="plus">
                                         <span >
                                             今日表现 
                                             <span class="color-red">
-                                                +4.51
+                                                -3.20
                                             </span>
                                         </span>
                                     </div>
@@ -112,21 +114,29 @@
                                 <div class="probability">
                                     <div class="bit">
                                         <p>
-                                            打败了&nbsp;<span class="color-red">99.82%</span>&nbsp;的股票
+                                            打败了&nbsp;<span class="color-red">93.55%</span>&nbsp;的股票
                                         </p>
                                     </div>
-                                    <p>
-                                        近日消息面活跃，主力资金有大幅介入迹象，短期呈现震荡趋势。公司质地优秀，市场关注意愿无明显变化。
+                                    <p>近日消息面活跃，主力资金有大幅介入迹象，短期呈现震荡趋势。公司质地优秀，市场关注意愿无明显变化。
+                                        
                                     </p>
                                 </div>
                             </article>
                         </div>    
-                        <div class="clear"></div>
+                        <div class="clear"></div> 
                         
                     </div>
                 </div>
-                    
             </div>
         </div>
+
+        <script type="text/javascript" src="../js/specific_init.js"></script> 
+        <script type="text/javascript" src="../js/Candles.js"></script>
+        <script type="text/javascript" src="../js/Volume.js"></script>
+        <script type="text/javascript" src="../js/Aroon.js"></script>
+        <script type="text/javascript" src="../js/MACD.js"></script>
+        <script type="text/javascript" src="../js/ADX.js"></script>
+        <script type="text/javascript" src="../js/WR.js"></script>
+        <script type="text/javascript" src="../js/layout.js"></script>
     </body>
 </html>

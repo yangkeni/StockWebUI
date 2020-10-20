@@ -7,7 +7,8 @@
         <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css">
         <link rel="stylesheet" href="../css/reset.css">
         <link rel="stylesheet" href="../css/index.min.css">
-        <link rel="stylesheet" href="../css/stock.css">
+        <link rel="stylesheet" href="../css/index-specific.css">
+        <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
         <title>财务通</title>
     </head>
     <body>
@@ -28,7 +29,7 @@
             <div class="searchWrapper"><!--搜索框-->
                 <div class="searchForm">
                     <form action="../html/specific.html" method="get">
-                        <input type="text" class="searchBox" placeholder="sh000001 上证指数" title="搜索关键词" name="search">
+                        <input type="text" class="searchBox" placeholder="请输入沪深首字母加股票代码，如sh000001" title="搜索关键词" name="search">
                         <button type="submit" class="fa fa-search"></button>
                     </form>
                 </div>
@@ -40,103 +41,89 @@
                         <span>热门股票</span> 
                     </div>
                     <article class="top-Stock" >
-                        <table class="topStock" id = "topNo.1"><!--热门股票1-->
+                        <table class="topStock" id = "topNo1"><!--热门股票1-->
                             <tr><!--股票名称-->
                                 <td colspan="4" class="StockName">
                                     <a href="../html/specific.html">
-                                        <h3>贵州茅台</h3><span> (600519)</span>
+                                        <h3></h3> (<span></span>)
                                     </a>
                                 </td>
                             </tr>
                             <tr><!--涨跌情况-->
-                                <td colspan="2" rowspan="2" class="bigTheme color-red">
-                                    <p>466.<span>46</span></p>
+                                <td colspan="2" rowspan="2" class="bigTheme price">
+                                    <span></span>
                                 </td>
                                 <td>涨跌额</td>
                                 <td>涨跌幅</td>
                             </tr>
-                            <tr class="littleTheme color-green">
-                                <td>
-                                    <p>
-                                        -2.
-                                        <span>12</span>
-                                    </p>
+                            <tr class="littleTheme">
+                                <td class="amount">
+                                    <span></span>
                                 </td>
-                                <td>
-                                    <p>
-                                        -3.
+                                <td class = "range"> 
                                         <span>
-                                            95
+                                            
                                         </span>
-                                    </p>
                                 </td>
                             </tr>
                         </table>
                     </article>
                     <article class="top-Stock">
-                        <table class="topStock" id = "topNo.2"><!--热门股票2-->
+                        <table class="topStock" id = "topNo2"><!--热门股票2-->
                             <tr>
                                 <td colspan="4" class="StockName">
                                     <a href="../html/specific.html">
-                                        <h3>贵州茅台</h3><span> (600519)</span>
+                                        <h3></h3> (<span></span>)
                                     </a>
                                 </td>
                             </tr>
                             <tr>
-                                <td colspan="2" rowspan="2" class="bigTheme color-red">
-                                    <p>466.<span>46</span></p>
+                                <td colspan="2" rowspan="2" class="bigTheme price">
+                                    <span></span>
                                 </td>
                                 <td>涨跌额</td>
                                 <td>涨跌幅</td>
                             </tr>
                             <tr class="littleTheme color-green">
-                                <td>
-                                    <p>
-                                        -2.
-                                        <span>12</span>
-                                    </p>
+                                <td class="amount">
+                                       
+                                        <span></span>
                                 </td>
-                                <td>
-                                    <p>
-                                        -3.
+                                <td class = "range">
+                                       
                                         <span>
-                                            95
+                                           
                                         </span>
-                                    </p>
                                 </td>
                             </tr>
                         </table>
                     </article>
                     <article class="top-Stock">
-                        <table class="topStock" id = "topNo.3"><!--热门股票3-->
+                        <table class="topStock" id = "topNo3"><!--热门股票3-->
                             <tr>
                                 <td colspan="4" class="StockName">
                                     <a href="../html/specific.html">
-                                        <h3>贵州茅台</h3><span> (600519)</span>
+                                        <h3></h3> (<span></span>)
                                     </a>
                                 </td>
                             </tr>
                             <tr>
-                                <td colspan="2" rowspan="2" class="bigTheme color-red">
-                                    <p>466.<span>46</span></p>
+                                <td colspan="2" rowspan="2" class="bigTheme price">
+                                   <span></span>
                                 </td>
                                 <td>涨跌额</td>
                                 <td>涨跌幅</td>
                             </tr>
-                            <tr class="littleTheme color-green">
-                                <td>
-                                    <p>
-                                        -2.
-                                        <span>12</span>
-                                    </p>
+                            <tr class="littleTheme">
+                                <td  class="amount">
+                                        
+                                        <span></span>
                                 </td>
-                                <td>
-                                    <p>
-                                        -3.
+                                <td class = "range">
+                                       
                                         <span>
-                                            95
+                                            
                                         </span>
-                                    </p>
                                 </td>
                             </tr>
                         </table>
@@ -149,111 +136,111 @@
                         <span>我的自选</span>
                     </div>
                     <article class="IndexDocker"><!--指数显示-->
-                        <div class="singleIndex">
+                        <div class="singleIndex" id = "index1">
                             <table>
                                 <tr>
                                     <td rowspan="2" class="IndexName">
-                                        <a href="#">上证指数</a>
+                                        <a href="../html/specific.html?search=sh000001">上证指数</a>
                                     </td>
-                                    <td class="littleTheme color-green">-5.
-                                        <span>81</span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="littleTheme color-green">
-                                        -0.<span>17</span>%
+                                    <td class="littleTheme">
+                                        <span></span>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td colspan="2" class="bigTheme color-green">
-                                        <p>3404.<span>80</span></p>
+                                    <td class="littleTheme">
+                                        <span></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2" class="bigTheme">
+                                        <span></span>
                                     </td>
                                 </tr>
                             </table>
                         </div>
-                        <div class="singleIndex">
+                        <div class="singleIndex" id = "index2">
                             <table>
                                 <tr>
                                     <td rowspan="2" class="IndexName">
-                                        <a href="#">深证成指</a>
+                                        <a href="../html/specific.html?search=sz399001">深证成指</a>
                                     </td>
-                                    <td class="littleTheme color-red">+37.
-                                        <span>77</span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="littleTheme color-red">
-                                        +0.<span>27</span>%
+                                    <td class="littleTheme">
+                                        <span></span>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td colspan="2" class="bigTheme color-red">
-                                        <p>13887.<span>43</span></p>
+                                    <td class="littleTheme">
+                                        <span></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2" class="bigTheme">
+                                        <span></span>
                                     </td>
                                 </tr>
                             </table>
                         </div>
-                        <div class="singleIndex">
+                        <div class="singleIndex" id = "index3">
                             <table>
                                 <tr>
                                     <td rowspan="2" class="IndexName">
-                                        <a href="#">创业板指</a>
+                                        <a href="../html/specific.html?search=sz399006">创业板指</a>
                                     </td>
-                                    <td class="littleTheme color-red">21.
-                                        <span>43</span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="littleTheme color-red">
-                                        +0.<span>78</span>%
+                                    <td class="littleTheme">
+                                        <span></span>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td colspan="2" class="bigTheme color-red">
-                                        <p>2771.<span>85</span></p>
+                                    <td class="littleTheme">
+                                        <span></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2" class="bigTheme">
+                                        <p><span></span></p>
                                     </td>
                                 </tr>
                             </table>
                         </div>
                     </article>
-                    <article class="option-Stock"><!--单个股票-->
+                    <article class="option-Stock" id="option1"><!--单个股票-->
                         <div class="title">
                             <a href="../html/specific.html">
-                                <h3>贵州茅台</h3><span> (600519)</span>
+                                <h3>贵州茅台</h3> (<span>sh600519</span>)
                             </a>
                         </div>
                         <div class="mainData">
                             <div class="priceInfo">
-                                <span class="price bigTheme color-green">1795.
-                                    <span>00</span>
+                                <span class="price bigTheme">
+                                    <span></span>
                                 </span>
-                                <span class="amount littleTheme color-green">-6.
-                                    <span>98</span>
+                                <span class="amount littleTheme">
+                                    <span></span>
                                 </span>
-                                <span class="range littleTheme color-green">(-0.
-                                    <span>39</span>%)
+                                <span class="range littleTheme">
+                                    <span></span>
                                 </span>
                             </div>
                             <div class="otherInfo">
                                 <table>
                                     <tr>
                                         <td>
-                                            <label>成交量：</label>
-                                            <span>3.20万</span>
+                                            <label>开盘价：</label>
+                                            <span></span>
                                         </td>
                                          <td>
-                                            <label>换手率：</label>
-                                            <span>0.25%</span>
+                                            <label>最高：</label>
+                                            <span></span>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td>
-                                            <label>市盈率：</label>
-                                            <span>49.88</span>
+                                            <label>昨收价：</label>
+                                            <span></span>
                                         </td>
                                         <td>
-                                            <label>总市值：</label>
-                                            <span>22549亿</span>
+                                            <label>最低：</label>
+                                            <span></span>
                                         </td>
         
                                     </tr>
@@ -261,45 +248,45 @@
                             </div>
                         </div>
                     </article>
-                    <article class="option-Stock"><!--单个股票-->
+                    <article class="option-Stock" id="option2"><!--单个股票-->
                         <div class="title">
                             <a href="../html/specific.html">
                                 <h3>五粮液</h3>
-                                <span> (000858)</span>
+                                 (<span>sz000858</span>)
                             </a>
                         </div>
                         <div class="mainData">
                             <div class="priceInfo">
-                                <span class="price bigTheme color-green">235.
-                                    <span>00</span>
+                                <span class="price bigTheme">
+                                    <span></span>
                                 </span>
-                                <span class="amount littleTheme color-green">-1.
-                                    <span>24</span>
+                                <span class="amount littleTheme">
+                                    <span></span>
                                 </span>
-                                <span class="range littleTheme color-green">(-0.
-                                    <span>52</span>%)
+                                <span class="range littleTheme">
+                                    <span></span>
                                 </span>
                             </div>
                             <div class="otherInfo">
                                 <table>
                                     <tr>
                                         <td>
-                                            <label>成交量：</label>
-                                            <span>19.63万</span>
+                                            <label>开盘价：</label>
+                                            <span></span>
                                         </td>
                                          <td>
-                                            <label>换手率：</label>
-                                            <span>0.52%</span>
+                                            <label>最高：</label>
+                                            <span></span>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td>
-                                            <label>市盈率：</label>
-                                            <span>42.01</span>
+                                            <label>昨收价：</label>
+                                            <span></span>
                                         </td>
                                         <td>
-                                            <label>总市值：</label>
-                                            <span>9122亿</span>
+                                            <label>最低：</label>
+                                            <span></span>
                                         </td>
         
                                     </tr>
@@ -317,24 +304,24 @@
                     <div class="recommendContent">
                         <div class="recommendTheme">
                             <i class="fa fa-tags"></i>
-                            <span>白酒类</span>
+                            <span></span>类
                         </div>
-                        <div class="recommend-Stock">
+                        <div class="recommend-Stock" id="industryNo1">
                             <div class="title">
                                 <a href="../html/specific.html">
-                                    <h3>泸州老窖</h3><span> (000568)</span>
+                                    <h3></h3> (<span></span>)
                                 </a>
                             </div>
                             <div class="mainData">
                                 <div class="priceInfo">
-                                    <span class="price bigTheme color-green">147.
-                                        <span>10</span>
+                                    <span class="price bigTheme">
+                                        <span></span>
                                     </span>
-                                    <span class="amount littleTheme color-green">-0.
-                                        <span>67</span>
+                                    <span class="amount littleTheme">
+                                        <span></span>
                                     </span>
-                                    <span class="range littleTheme color-green">(-0.
-                                        <span>45</span>%)
+                                    <span class="range littleTheme">
+                                        <span></span>
                                     </span>
                                 </div>
                             </div>
@@ -343,24 +330,24 @@
                     <div class="recommendContent">
                         <div class="recommendTheme">
                             <i class="fa fa-tags"></i>
-                            <span>生物科技类</span>
+                            <span></span>类
                         </div>
-                        <div class="recommend-Stock">
+                        <div class="recommend-Stock" id="industryNo2">
                             <div class="title">
                                 <a href="../html/specific.html">
-                                    <h3>天坛生物</h3><span> (600161)</span>
+                                    <h3></h3> (<span></span>)
                                 </a>
                             </div>
                             <div class="mainData">
                                 <div class="priceInfo">
-                                    <span class="price bigTheme color-green">42.
-                                        <span>20</span>
+                                    <span class="price bigTheme">
+                                        <span></span>
                                     </span>
-                                    <span class="amount littleTheme color-green">-0.
-                                        <span>82</span>
+                                    <span class="amount littleTheme">
+                                        <span></span>
                                     </span>
-                                    <span class="range littleTheme color-green">(-1.
-                                        <span>91</span>%)
+                                    <span class="range littleTheme">
+                                        <span></span>
                                     </span>
                                 </div>
                             </div>
@@ -370,5 +357,6 @@
                 </div>
             </div>
         </div>
+        <script src="../js/index_init.js"></script>
     </body>
 </html>
