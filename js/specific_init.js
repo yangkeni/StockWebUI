@@ -1,3 +1,12 @@
+function sleep(time){
+    var timeStamp = new Date().getTime();
+    var endTime = timeStamp + time;
+    while(true){
+    if (new Date().getTime() > endTime){
+     return;
+    } 
+    }
+}
 var stockSearch = window.location.search.substr(8);
 var jqxhr = $.get('https://api.doctorxiong.club/v1/stock', {
     code: stockSearch
@@ -62,4 +71,15 @@ var jqxhr = $.get('https://api.doctorxiong.club/v1/stock', {
     let limitDown = (((parseFloat(close))*0.9).toFixed(2)).toString();
     $('.limitDown+td').text(limitDown);
     $('.turnover+td>span').text(turnover);
+    var stockName = {
+        nameZh: $('.title h3').text(),
+        nameNumber: $('.title span').text()
+    };
+    Candles(stockName);
+    Volume(stockName);
+    Aroon(stockName);
+    MACD(stockName);
+    ADX(stockName);
+    WR(stockName);
+    layout();
 });

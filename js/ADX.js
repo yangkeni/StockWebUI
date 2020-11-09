@@ -1,39 +1,45 @@
-    var xADX = techan.scale.financetime()
-            .range([0, width]);
 
-    var yADX = d3.scaleLinear()
-            .range([height, 0]);
+    function ADX(stockName){
+        var margin = {top: 20, right: 50, bottom: 30, left: 50},
+        width = 780 - margin.left - margin.right,
+        height = 300 - margin.top - margin.bottom;
+        var parseDate = d3.timeParse("%d-%b-%y");       
+        var xADX = techan.scale.financetime()
+                .range([0, width]);
 
-    var adx = techan.plot.adx()
-            .xScale(xADX)
-            .yScale(yADX);
+        var yADX = d3.scaleLinear()
+                .range([height, 0]);
 
-    var xAxisADX = d3.axisBottom(xADX);
+        var adx = techan.plot.adx()
+                .xScale(xADX)
+                .yScale(yADX);
 
-    var yAxisADX = d3.axisLeft(yADX)
-            .tickFormat(d3.format(",.3s"));
+        var xAxisADX = d3.axisBottom(xADX);
 
-    var svgADX = d3.select(".layout").append("svg")
-            .attr("width", width + margin.left + margin.right)
-            .attr("height", height + margin.top + margin.bottom)
-            .attr("class","ACD")
-            .append("g")
-            .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+        var yAxisADX = d3.axisLeft(yADX)
+                .tickFormat(d3.format(",.3s"));
 
-    d3.csv("../data/"+stockName.nameNumber + ".csv", function(error, dataADX) {
+        var svgADX = d3.select(".layout").append("svg")
+                .attr("width", width + margin.left + margin.right)
+                .attr("height", height + margin.top + margin.bottom)
+                .attr("class","ACD")
+                .append("g")
+                .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+        d3.csv("../data/"+stockName.nameNumber + ".csv", function(error, dataADX) {
         var accessorADX = adx.accessor();
 
         dataADX = dataADX.map(function(d) {
-            // Open, high, low, close generally not required, is being used here to demonstrate colored volume
-            // bars
-            return {
+                // Open, high, low, close generally not required, is being used here to demonstrate colored volume
+                // bars
+                return {
                 date: parseDate(d.Date),
                 volume: +d.Volume,
                 open: +d.Open,
                 high: +d.High,
                 low: +d.Low,
                 close: +d.Close
-            };
+                };
         }).sort(function(a, b) { return d3.ascending(accessorADX.d(a), accessorADX.d(b)); });
 
         svgADX.append("g")
@@ -54,9 +60,9 @@
 
         // Data to display initially
         drawADX(dataADX.slice(0, dataADX.length-20));
-    });
+        });
 
-    function drawADX(dataADX) {
+        function drawADX(dataADX) {
         var adxData = techan.indicator.adx()(dataADX);
         xADX.domain(adxData.map(adx.accessor().d));
         yADX.domain(techan.scale.plot.adx(adxData).domain());
@@ -64,4 +70,5 @@
         svgADX.selectAll("g.adx").datum(adxData).call(adx);
         svgADX.selectAll("g.x.axis").call(xAxisADX);
         svgADX.selectAll("g.y.axis").call(yAxisADX);
+        }
     }
